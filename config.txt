@@ -1,0 +1,35 @@
+# Config for rtsp-grabber.py
+# Lines that start with '#' are ignored
+
+# the url of the rtsp stream to capture from
+# if you re using a wyze camera you can find this in:
+# camera settings > advanced settings > rtsp
+# this should be in the format rtsp://username:password@192.168.0.X/live
+# the /live part may be missing or different on other cameras
+
+    rtsp_url:rtsp://username:password@192.168.0.123/live
+
+# the directory to save images in
+# use '/' slashes and make sure the path ends with a slash ex: /home/pi/captured images/
+
+    image_directory:/home/pi/Pictures/
+
+# the time between images in seconds
+# note if will take a couple seconds to capture an image
+# use interval:0 to capture images as fast as possible
+
+    interval:60
+
+# how to format the name of the file
+# note that for iso and unix the timezone is UTC
+# file name options are:
+# unix -> 1610827390.jpg
+# utc -> 2021-01-16T19-42-39Z
+# local -> 2021-01-16T14-42-39
+
+    name_format:unix
+
+# jpeg image quality
+# a number between 0 and 100
+
+    quality:100
